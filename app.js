@@ -12,6 +12,21 @@ app.get("/", function(req,res){
     res.sendFile(__dirname+"/signup.html")
 })
 
+app.post("/", function(req, res){
+    const data = req.body;
+    const fName = data.firstName;
+    const lName = data.lastName;
+    const email = data.email;
+
+    console.log(`You provided: Name ${fName} ${lName} and email is ${email}`)
+
+
+    res.sendFile(__dirname+"/signup.html")
+})
+
+
+
+
 app.listen(PORT, function(){
     console.log(`Server started on port ${PORT}`)
 });
