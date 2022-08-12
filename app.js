@@ -2,6 +2,8 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const request = require("request");
 const PORT = 3000
+const API_KEY = "";
+
 
 const app = express()
 app.use(bodyParser.urlencoded({extended: true}));
