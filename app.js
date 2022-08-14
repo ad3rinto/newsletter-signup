@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const request = require("request");
-const PORT = 3000
+const PORT = process.env.PORT;
 const API_KEY = "";
 
 
@@ -29,7 +29,7 @@ app.post("/", function(req, res){
 
 
 
-app.listen(PORT, function(){
+app.listen(PORT || 3000, function(){
     console.log(`Server started on port ${PORT}`)
 });
 
